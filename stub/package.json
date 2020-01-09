@@ -5,16 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "parcel build"
+    "build": "parcel build static/base-blocks/*.scss"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bem-xjst": "^8.9.6",
-    "express": "^4.17.1"
+    "dart-sass": "^1.24.3",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0",
     "sass": "^1.24.2"
   }
 }
