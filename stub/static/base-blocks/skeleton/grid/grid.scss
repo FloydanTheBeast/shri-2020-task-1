@@ -1,0 +1,39 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
+    column-gap: var(--column-gap, 0);
+    row-gap: var(--row-gap, 0);
+
+    &_m-columns {
+        $columns: (10, 12);
+
+        @each $column in $columns {
+            // Количество столбцов в сетке
+            --grid-columns: #{$column};
+        }
+    }
+
+    &_col-gap {
+        &_two-thirds {
+            --column-gap: calc(var(--gap) * 2 / 3);
+        }
+
+        &_full {
+            --column-gap: var(--gap);
+        }
+
+        &_half {
+            --column-gap: calc(var(--gap) / 2);
+        }
+    }
+
+    &_row-gap {
+        &_full {
+            --row-gap: var(--gap);
+        }
+
+        &_half {
+            --row-gap: calc(var(--gap) / 2);
+        }
+    }
+}

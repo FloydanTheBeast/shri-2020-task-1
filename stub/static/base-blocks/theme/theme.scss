@@ -1,0 +1,50 @@
+@use '../../consts/defaults' as *;
+@use '../../consts/themes' as *;
+@use '../../consts/sizes' as *;
+@use '../../consts/spaces' as *;
+@use '../../consts/breakpoints' as *;
+
+.theme {
+    &_color {
+        @each $theme-name, $colors in $color-themes {
+            &_#{$theme-name} {
+                @each $color-name, $color in $colors {
+                    --color-#{$color-name}: #{$color};
+                }
+            }
+        }
+    }
+
+    &_space {
+        // Итерация по всевозможным значениям отступов
+        @each $spacing-name, $spaces in $theme-spaces {
+            &_#{$spacing-name} {
+                @each $space-type, $spacing in $spaces {
+                    --space-#{$space-type}: #{$spacing};
+                } 
+            }
+        }
+    }
+
+    &_size {
+        // Итерация по всевозможным значениям размеров
+        @each $sizing-name, $sizes in $theme-sizes {
+            &_#{$sizing-name} {
+                @each $size-type, $sizing in map-get($map: $sizes, $key: "font-sizes") {
+                    --font-size-#{$size-type}: #{$sizing};
+                }
+                @each $size-type, $sizing in map-get($map: $sizes, $key: "line-heights") {
+                    --line-height-#{$size-type}: #{$sizing};
+                }
+            }
+        }
+    }
+
+    &_gap_small {
+        --gap: var(--space-s);
+
+        @include desktop-breakpoint {
+            --gap: var(--space-xl);
+        }
+    }
+}
