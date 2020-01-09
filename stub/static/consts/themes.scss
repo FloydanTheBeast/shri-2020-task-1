@@ -1,0 +1,41 @@
+@use "sass:map";
+@use "./colors" as *;
+
+$color-themes: (
+    "project-default": (
+        "default": $white,
+        "accent": #FC0,
+        "border": $black,
+        "text-primary": $black,
+        "text-secondary": rgba($black,0.6),
+        "text-ghost": rgba($black, 0.3),
+        "text-link": $blue
+    ),
+    "project-brand": (
+        "default": $blue,
+        "accent": $white,
+        "border": $white,
+        "text-primary": $white,
+        "text-secondary": rgba($white, 0.6),
+        "text-ghost": rgba($white, 0.3),
+        "text-link": $white
+    ),
+    "project-inverse": (
+        "default": $black,
+        "accent": $white,
+        "border": $white,
+        "text-primary": $white,
+        "text-secondary": rgba($white, 0.6),
+        "text-ghost": rgba($white, 0.3),
+        "text-link": $blue
+    ),
+    "project-warning": (
+        "default": #f33,
+        "accent": $white    ,
+        "border": #f33,
+        "text-primary": $white,
+        "text-secondary": rgba($white, 0.6),
+        "text-ghost": rgba($white, 0.3),
+        "text-link": $white
+    )
+);
