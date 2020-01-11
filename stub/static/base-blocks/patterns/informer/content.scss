@@ -1,0 +1,24 @@
+@use '../../../utils/space-setter' as *;
+
+.informer__content {
+    display: flex;
+
+    &_distribute {
+        &_default {
+            justify-content: unset;
+        }
+
+        &_between {
+            justify-content: space-between;
+        }
+
+        &_center {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &_space-a {
+        @include set-space(('xl', 'xxl'), ('padding'));
+    }
+}

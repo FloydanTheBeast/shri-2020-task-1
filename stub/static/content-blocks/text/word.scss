@@ -1,0 +1,15 @@
+.text__word {
+    $word-sizes: ('s', 'm', 'l');
+
+    display: inline-block;
+    height: var(--text-height);
+    background-color: currentColor;
+
+    &_width {
+        @each $word-size in $word-sizes {
+            &_#{$word-size} {
+                width: var(--word-width-#{$word-size});
+            }
+        }
+    }
+}

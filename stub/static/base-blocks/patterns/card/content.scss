@@ -1,0 +1,19 @@
+@use '../../../consts/spaces' as *;
+
+.card__content {
+    &_distribute {
+        &_center {
+            align-items: center;
+        }
+    }
+
+    &_vertical-align {
+        &_center {
+            justify-content: center;
+        }
+    }
+
+    &_space-a {
+        padding: var(--space-m);
+    }
+}

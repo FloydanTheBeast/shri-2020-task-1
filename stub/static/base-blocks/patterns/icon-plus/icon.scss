@@ -1,0 +1,11 @@
+@use '../../../utils/space-setter' as *;
+
+.inon-plus__icon {
+    &_indent-r {
+        @include set-space(('s', 'm'), ('margin-right'));
+    }
+
+    &_indent-l {
+        @include set-space(('l'), ('margin-left'));
+    }
+}

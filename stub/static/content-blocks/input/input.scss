@@ -1,0 +1,15 @@
+@use '../../utils/size-setter' as *;
+
+.input {
+    border: 3px solid var(--color-border);
+
+    &_size {
+        @include set-size((
+            's': (100%, 24px),
+            'm': (100%, 32px),
+            'l': (100%, 42px),
+            'xl': (100%, 56px),
+            'xxl': (100%, 64px)
+        ));
+    }
+}

@@ -1,0 +1,9 @@
+@mixin set-space($values, $props) {
+    @each $spacing in $values {
+        &_#{$spacing} {
+            @each $prop in $props {
+                #{$prop}: var(--space-#{$spacing})
+            }
+        }
+    }
+}

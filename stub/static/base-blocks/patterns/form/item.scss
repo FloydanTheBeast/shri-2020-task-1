@@ -1,0 +1,42 @@
+@use '../../../utils/space-setter' as *;
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+
+    &_border {
+        &_bottom {
+            &:not(:last-child) {
+                border-bottom: 3px solid var(--color-border);
+            }
+        }
+    }
+
+    &_distribute {
+        &_between {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &_vertical-align {
+        &_center {
+            align-items: center;
+        }
+    }
+
+    &_indent-b {
+        @include set-space(('xxxs', 'xxs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl'),
+                ('margin-bottom'))
+    }
+
+    &_space-h {
+        @include set-space(('xxxs', 'xxs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl'),
+                ('padding-left', 'padding-right'))
+    }
+
+    &_space-v {
+        @include set-space(('xxxs', 'xxs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl', 'xxxxl'),
+                ('padding-top', 'padding-bottom'))
+    }
+}

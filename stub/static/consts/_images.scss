@@ -1,0 +1,8 @@
+$placeholder-white: url('../../../assets/images/image-placeholder-inverse.svg');
+$placeholder-black: url('../../../assets/images/image-placeholder-primary.svg');
+
+$themes-image: (
+    'project-default': $placeholder-white,
+    'project-inverse': $placeholder-white,
+    'project-brand': $placeholder-black
+);

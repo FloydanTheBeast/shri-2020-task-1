@@ -1,0 +1,21 @@
+@use '../../utils/size-setter' as *;
+
+.button {
+    background-color: var(--color-accent);
+
+    &_size {
+        @include set-size((
+            's': (200px, 24px),
+            'm': (200px, 32px),
+            'l': (200px, 42px),
+            'xl': (200px, 56px),
+            'xxl': (200px, 64px)
+        ));
+    }
+
+    &_width {
+        &_full {
+            width: 100%;
+        }
+    }
+}

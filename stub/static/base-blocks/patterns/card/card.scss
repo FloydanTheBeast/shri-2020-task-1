@@ -1,0 +1,13 @@
+.card {
+    &_border {
+        &_all {
+            border-width: 3px; // FIXME: не уверен, какая здесь толщина
+        }
+    }
+
+    &_view {
+        &_default {
+            background-color: var(--color-default);
+        }
+    }
+}

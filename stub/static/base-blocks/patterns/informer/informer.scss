@@ -1,0 +1,13 @@
+.informer {
+    &_border {
+        &_all {
+            border: 3px solid var(--color-border);
+        }
+    }
+
+    &_view {
+        &_default {
+            background-color: var(--color-default);
+        }
+    }
+}

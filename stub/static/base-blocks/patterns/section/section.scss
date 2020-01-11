@@ -1,0 +1,11 @@
+@use '../../../utils/space-setter' as *;
+
+.section {
+    &_indent-b {
+        @include set-space(('xxl', 'xxxxl'), ('margin-bottom'));
+    }
+
+    &_space-v {
+        @include set-space(('xxl', 'xxxxl'), ('padding-top', 'padding-bottom'));
+    }
+}

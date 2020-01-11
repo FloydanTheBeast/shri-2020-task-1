@@ -13,8 +13,8 @@ gulp.task('scss', () => {
 gulp.task('bundle', () => {
     return gulp.src('./static/styles/**/*.css')
         .pipe(cleanCSS())
-        .pipe(concat('styles.css'))
-        .pipe(gulp.dest('./static'))
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest('./build'))
 })
  
 gulp.task('scss:watch', () => {

@@ -1,0 +1,54 @@
+@use '../../consts/sizes' as *;
+
+.text {
+    $word-sizes: ('s', 'm', 'l');
+    $width-values: (
+        's': 20px 48px 100px,
+        'm': 24px 56px 114px,
+        'l': 28px 68px 138px,
+        'xl': 32px 74px 154px,
+        'xxl': 36px 88px 184px
+    );
+
+    &_align {
+        &_center {
+            text-align: center;
+        }
+    }
+
+    &_size {
+        @each $type, $size in map-get(map-get($map: $theme-sizes, $key: 'default'), 'font-sizes') {
+            &_#{$type} {
+                --text-height: #{$size};
+                @each $word-size, $width-value in zip($word-sizes, map-get($map: $width-values, $key: $type)) {
+                    --word-width-#{$word-size}: #{$width-value};
+                }
+            }
+        }
+    }
+
+    &_type {
+        $spacings: (
+            'h1': 18px 0 24px,
+            'h2': 45px 0 21px,
+            'h3': 42px 0 0,
+            'p': 15px 0 21px
+        );
+
+        @each $type, $spacing in $spacings {
+            &_#{$type} {
+                margin: #{$spacing};
+            }
+        }
+    }
+
+    &_view {
+        $font-colors: ('primary', 'secondary', 'ghost', 'link');
+
+        @each $font-color in $font-colors {
+            &_#{$font-color} {
+                color: var(--color-text-#{$font-color});
+            }
+        }
+    }
+}

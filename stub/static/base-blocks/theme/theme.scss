@@ -3,11 +3,13 @@
 @use '../../consts/sizes' as *;
 @use '../../consts/spaces' as *;
 @use '../../consts/breakpoints' as *;
+@use '../../consts/images' as *;
 
 .theme {
     &_color {
         @each $theme-name, $colors in $color-themes {
             &_#{$theme-name} {
+                --placeholder-image: #{map-get($map: $themes-image, $key: $theme-name)} #{$placeholder-black};
                 @each $color-name, $color in $colors {
                     --color-#{$color-name}: #{$color};
                 }

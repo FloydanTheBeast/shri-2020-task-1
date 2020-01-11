@@ -1,0 +1,8 @@
+@mixin set-size($props) {
+    @each $modifier, $size in $props {
+        &_#{$modifier} {
+            width: nth($list: $size, $n: 1);
+            height: nth($list: $size, $n: 2);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use '../../utils/size-setter' as *;
+
+.brand-logo {
+    $logo-colors: (
+        'blue': #5dcdf9,
+        'green': #23b324,
+        'red': #ff3333,
+        'purple': #c62cff
+    );
+
+    &_name {
+        @each $color-name, $color-value in $logo-colors {
+            &_#{$color-name} {
+                background-color: #{$color-value};
+            }
+        }
+    }
+
+    &_size {
+        @include set-size((
+            'xxs': (24px, 24px),
+            'xs': (32px, 32px),
+            's': (40px, 40px),
+            'm': (60px, 60px),
+            'l': (80px, 80px)
+        ));
+    }
+}
