@@ -1,4 +1,5 @@
 @use '../../../consts/spaces' as *;
+@use '../../../utils/space-setter' as *;
 
 .card__content {
     &_distribute {
@@ -14,6 +15,7 @@
     }
 
     &_space-a {
-        padding: var(--space-m);
+        @include set-space(('m', 'xl', 'l', 'xxl', 'xxxl'),
+                ('padding'));
     }
 }

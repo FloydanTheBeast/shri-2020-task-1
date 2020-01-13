@@ -1,7 +1,7 @@
 .card {
     &_border {
         &_all {
-            border-width: 3px; // FIXME: не уверен, какая здесь толщина
+            border: 3px solid var(--color-border);
         }
     }
 

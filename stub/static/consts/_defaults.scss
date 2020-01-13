@@ -1,11 +1,11 @@
 @use 'breakpoints' as *;
 
-* {
+body * {
     box-sizing: border-box;
 }
 
 @include desktop-breakpoint {
-    * {
+    body * {
         display: block;
     }
 };

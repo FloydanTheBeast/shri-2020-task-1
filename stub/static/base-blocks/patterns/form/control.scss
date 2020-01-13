@@ -1,3 +1,7 @@
 .form__control {
-    // FIXME: стили
+    &_width {
+        &_default {
+            width: 35%;
+        }
+    }
 }
