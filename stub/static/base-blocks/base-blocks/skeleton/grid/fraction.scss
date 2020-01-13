@@ -4,8 +4,11 @@
     &_m-col {
         $spans: (2, 3, 4, 5, 8);
 
+        
         @each $span in $spans {
-            --grid-span: #{$span};
+            &_#{$span} {
+                --grid-span: #{$span};
+            }
         }
     }
 }

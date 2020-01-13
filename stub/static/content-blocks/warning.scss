@@ -1,0 +1,8 @@
+@use '../consts/sizes' as *;
+
+.warning {
+    min-height: 335px;
+    & .placeholder {
+        margin: var(--space-m) 0;
+    }
+}

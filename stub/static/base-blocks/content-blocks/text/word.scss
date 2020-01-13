@@ -2,13 +2,14 @@
     $word-sizes: ('s', 'm', 'l');
 
     display: inline-block;
-    height: var(--text-height);
+    height: var(--font-size);
     background-color: currentColor;
 
     &_width {
         @each $word-size in $word-sizes {
             &_#{$word-size} {
                 width: var(--word-width-#{$word-size});
+                margin: var(--word-spacing) 0;
             }
         }
     }

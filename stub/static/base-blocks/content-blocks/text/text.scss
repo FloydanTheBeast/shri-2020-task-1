@@ -1,6 +1,8 @@
 @use '../../../consts/sizes' as *;
 
 .text {
+    font-size: 0;
+
     $word-sizes: ('s', 'm', 'l');
     $width-values: (
         's': 20px 48px 100px,
@@ -19,7 +21,9 @@
     &_size {
         @each $type, $size in map-get(map-get($map: $theme-sizes, $key: 'default'), 'font-sizes') {
             &_#{$type} {
-                --text-height: #{$size};
+                --font-size: #{$size};
+                --word-spacing: calc((var(--line-height-#{$type}) - var(--font-size)) / 2);
+                
                 @each $word-size, $width-value in zip($word-sizes, map-get($map: $width-values, $key: $type)) {
                     --word-width-#{$word-size}: #{$width-value};
                 }
