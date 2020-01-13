@@ -1,4 +1,4 @@
-@use '../../../consts/spaces' as *;
+@use '../../../../utils/space-setter' as *;
 
 .card__footer {
     position: absolute;
@@ -36,6 +36,6 @@
     }
 
     &_space-a {
-        padding: var(--space-m);
+        @include set-space(('m', 'xl', 'l', 'xxl', 'xxxl'), ('padding'));
     }
 }

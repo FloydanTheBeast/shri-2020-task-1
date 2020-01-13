@@ -11,11 +11,13 @@ gulp.task('scss', () => {
 })
 
 gulp.task('bundle', () => {
-    return gulp.src('./static/styles/**/*.css')
+    return gulp.src('./static/styles/**/*.css', { base: './static' })
         .pipe(cleanCSS())
         .pipe(concat('style.css'))
         .pipe(gulp.dest('./build'))
 })
+
+gulp.task('build', gulp.series('scss', 'bundle'))
  
 gulp.task('scss:watch', () => {
     gulp.watch('./static/**/*.scss', gulp.series('scss'))

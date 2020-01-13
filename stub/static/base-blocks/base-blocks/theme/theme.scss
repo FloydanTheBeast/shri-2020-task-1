@@ -1,15 +1,15 @@
-@use '../../consts/defaults' as *;
-@use '../../consts/themes' as *;
-@use '../../consts/sizes' as *;
-@use '../../consts/spaces' as *;
-@use '../../consts/breakpoints' as *;
-@use '../../consts/images' as *;
+@use '../../../consts/defaults' as *;
+@use '../../../consts/themes' as *;
+@use '../../../consts/sizes' as *;
+@use '../../../consts/spaces' as *;
+@use '../../../consts/breakpoints' as *;
+@use '../../../consts/images' as *;
 
 .theme {
     &_color {
         @each $theme-name, $colors in $color-themes {
             &_#{$theme-name} {
-                --placeholder-image: #{map-get($map: $themes-image, $key: $theme-name)} #{$placeholder-black};
+                --placeholder-image: #{map-get($map: $themes-image, $key: $theme-name)};
                 @each $color-name, $color in $colors {
                     --color-#{$color-name}: #{$color};
                 }

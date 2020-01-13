@@ -1,6 +1,8 @@
-@use '../../../utils/space-setter' as *;
+@use '../../../../utils/space-setter' as *;
 
-.informer__action {
+.informer__content {
+    display: flex;
+
     &_distribute {
         &_default {
             justify-content: unset;
@@ -11,7 +13,8 @@
         }
 
         &_center {
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
         }
     }
 

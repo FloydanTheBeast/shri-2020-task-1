@@ -1,4 +1,5 @@
 node_modules
-build/*
+/**/build/*
+stub/static/styles
 .cache
 dist/*
