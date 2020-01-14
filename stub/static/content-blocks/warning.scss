@@ -1,7 +1,15 @@
 .warning {
     min-height: 335px;
-    
+    position: relative;
+
     & .placeholder {
         margin: var(--space-m) 0;
+    }
+
+    &__button-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }

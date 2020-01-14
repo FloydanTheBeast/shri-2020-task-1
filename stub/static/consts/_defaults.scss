@@ -12,6 +12,8 @@ body * {
 
     .grid > * {
         width: 100%;
-        margin-bottom: var(--row-gap);
+        &:not(:last-child) {
+            margin-bottom: var(--row-gap);
+        }
     }
 };

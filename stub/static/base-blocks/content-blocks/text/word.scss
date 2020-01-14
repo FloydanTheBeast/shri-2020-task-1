@@ -9,7 +9,7 @@
         @each $word-size in $word-sizes {
             &_#{$word-size} {
                 width: var(--word-width-#{$word-size});
-                margin: var(--word-spacing) 0;
+                margin: calc(var(--word-spacing) - var(--word-spacing-diff, 0px)) 0 calc(var(--word-spacing) + var(--word-spacing-diff, 0px)) 0;
             }
         }
     }
