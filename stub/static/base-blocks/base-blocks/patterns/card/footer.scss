@@ -1,9 +1,6 @@
 @use '../../../../utils/space-setter' as *;
 
 .card__footer {
-    position: absolute;
-    bottom: 0;
-
     display: flex;
     flex-flow: column;
 

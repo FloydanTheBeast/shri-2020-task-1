@@ -1,0 +1,22 @@
+.event {
+    min-height: 400px;
+
+    &__footer {
+        padding-top: 0 !important;
+    }
+
+    &__preview {
+        margin-bottom: var(--space-xxl);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-bottom: var(--space-s);
+    }
+
+    & .avatar {
+        margin-right: var(--space-xs);
+    }
+}

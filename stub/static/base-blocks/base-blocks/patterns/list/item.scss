@@ -1,13 +1,20 @@
 @use '../../../../utils/space-setter' as *;
 
 .list__item {
+    display: flex;
+    flex-direction: row;
+
     &_border {
         &_bottom {
-            border-bottom: 3px solid var(--color-border);
+            &:not(:last-child) {
+                border-bottom: 3px solid var(--color-border);
+            }
         }
 
         &_top {
-            border-top: 3px solid var(--color-border);
+            &:not(:first-child) {
+                border-top: 3px solid var(--color-border);
+            }
         }
     }
 

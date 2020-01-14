@@ -1,0 +1,9 @@
+.payment {
+    border: 3px solid var(--color-border);
+
+    &__content {
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

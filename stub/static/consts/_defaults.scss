@@ -5,7 +5,12 @@ body * {
 }
 
 @include desktop-breakpoint {
-    body * {
-        display: block;
+    .grid {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .grid > * {
+        width: 100%;
     }
 };

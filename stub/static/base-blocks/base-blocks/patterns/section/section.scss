@@ -1,6 +1,8 @@
 @use '../../../../utils/space-setter' as *;
 
 .section {
+    background-color: var(--color-default);
+
     &_indent-b {
         @include set-space(('xxl', 'xxxxl'), ('margin-bottom'));
     }

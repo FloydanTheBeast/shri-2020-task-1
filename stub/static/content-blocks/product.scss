@@ -1,0 +1,12 @@
+.product {
+    min-height: 300px;
+    border: 3px solid var(--color-border);
+
+    &__image {
+        height: 160px;
+    }
+
+    &__title {
+        margin-bottom: var(--space-xxxxl);
+    }
+}

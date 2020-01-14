@@ -1,15 +1,15 @@
-.grid {
+ .grid {
     display: grid;
-    grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
     column-gap: var(--column-gap, 0);
     row-gap: var(--row-gap, 0);
 
     &_m-columns {
-        $columns: (10, 12);
+        $columns-values: (10, 12);
 
-        @each $column in $columns {
-            // Количество столбцов в сетке
-            --grid-columns: #{$column};
+        @each $columns in $columns-values {
+            &_#{$columns} {
+                grid-template-columns: repeat($columns, 1fr);
+            }
         }
     }
 

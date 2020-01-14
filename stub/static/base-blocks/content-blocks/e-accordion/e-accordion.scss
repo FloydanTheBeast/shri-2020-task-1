@@ -1,0 +1,9 @@
+.e-accordion {
+    &__more {
+        display: none !important;
+
+        &_visible {
+            display: unset;
+        }
+    }
+}   
