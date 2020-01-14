@@ -43,10 +43,10 @@
     }
 
     &_gap_small {
-        --gap: var(--space-s);
+        --gap: var(--space-xl);
 
         @include desktop-breakpoint {
-            --gap: var(--space-xl);
+            --gap: var(--space-s);
         }
     }
 }
