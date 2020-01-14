@@ -1,4 +1,6 @@
 .card {
+    position: relative;
+
     &_border {
         &_all {
             border: 3px solid var(--color-border);

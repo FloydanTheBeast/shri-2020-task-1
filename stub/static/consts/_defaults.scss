@@ -12,5 +12,6 @@ body * {
 
     .grid > * {
         width: 100%;
+        margin-bottom: var(--row-gap);
     }
 };

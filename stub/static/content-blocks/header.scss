@@ -13,8 +13,5 @@
         flex-direction: row;
         justify-content: space-between;
         margin: 0 auto;
-        & > * {
-            align-self: center;
-        }
     }
 }
