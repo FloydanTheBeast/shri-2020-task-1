@@ -1,9 +1,16 @@
 .e-accordion {
+    display: flex;
+    flex-direction: column !important;
+
+    &__short:hover {
+        cursor: pointer;
+    }
+
     &__more {
         display: none !important;
 
-        &_visible {
-            display: unset;
+        &.visible {
+            display: block !important;
         }
     }
 }   

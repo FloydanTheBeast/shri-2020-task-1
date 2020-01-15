@@ -1,5 +1,9 @@
 @use 'breakpoints' as *;
 
+.theme {
+    background-color: var(--color-default);
+}
+
 body * {
     box-sizing: border-box;
 }

@@ -12,6 +12,10 @@
         flex-direction: row;
     }
 
+    &__description {
+        flex-direction: column !important;
+    }
+
     &__time {
         display: flex;
         flex-direction: column;
